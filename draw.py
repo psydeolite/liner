@@ -26,7 +26,10 @@ def draw_line( screen, x0, y0, x1, y1, color ):
     x=x0
     y=y0
     A=y1-y0
+    print A
+    
     B=-1*(x1-x0)
+    print B
     #eqn=get_eqnvals(x0,y0,x1,y1)
     #m=eqn[3]
     if B==0:
@@ -39,9 +42,10 @@ def draw_line( screen, x0, y0, x1, y1, color ):
             #vertical
     else:
         #print 'not vertical'
-        m=-1*A/B
-        if m>0:
-            if m<=1:
+        m=-A/B
+        print m
+        if y1>y0:
+            if A<=-B:
                 print 'octant 1 and 5'
                 #octant 1 and 5
                 d=2*A+B
@@ -68,8 +72,8 @@ def draw_line( screen, x0, y0, x1, y1, color ):
                         d+=2*A
                     y+=1
                     d+=2*B
-        elif m<0:
-            if m>-1:
+        elif y0<y1:
+            if A<B:
                 print 'octant 3 and 7'
                 #octant 3 and 7
                 d=A-2*B
@@ -92,9 +96,10 @@ def draw_line( screen, x0, y0, x1, y1, color ):
                         d+=2*A
                     x+=1
                     d+=2*A
-        elif m==0:
+        elif y0==y1:
+            print 'horizontal'
             while x<=x1:
-                print 'horizontal'
+                #print 'horizontal'
                 plot(screen, DEFAULT_COLOR, x,y)
                 x=x+1
                 #horizontal

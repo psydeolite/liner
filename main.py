@@ -6,7 +6,7 @@ color = [ 255, 255, 255 ]
 
 #octant I
 draw_line( screen, 0, 0, XRES - 1, YRES - 75, color )
-#octant II
+#octant II works
 draw_line( screen, 0, 0, XRES - 75, YRES - 1, color )
 #octant VIII
 draw_line( screen, 0, YRES - 1, XRES - 1, 75, color )
@@ -28,7 +28,7 @@ draw_line( screen, XRES - 1, 0, 75, YRES - 1, color )
 
 color[ BLUE ] = MAX_COLOR
 color[ RED ] = 0
-#y = x
+#y = x works
 draw_line( screen, 0, 0, XRES - 1, YRES - 1, color )
 #y = -x
 draw_line( screen, 0, YRES - 1, XRES - 1, 0, color )
