@@ -2,7 +2,7 @@ from display import *
 from draw import *
 
 screen = new_screen()
-color = [ 0, 255, 0 ]
+color = [ 255, 255, 255 ]
 
 #octant I
 draw_line( screen, 0, 0, XRES - 1, YRES - 75, color )
